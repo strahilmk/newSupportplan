@@ -3,11 +3,13 @@ var express = require('express');
 var router = express.Router();
 
 // Models
-var Product = require('../models/product');
+var supportPlan = require('../models/supportPlan');
+
 
 // Routes
-Product.methods(['get','put','post','delete']);
-Product.register(router, '/products');
+supportPlan.methods(['get','put','post','delete']);
+supportPlan.register(router, '/supportPlans');
+
 
 // Return router
 
