@@ -16,7 +16,10 @@ mongoose.connect('mongodb://admin:admin@ds029725.mlab.com:29725/supportplan');
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
-
+app.use(function(req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    return next();
+});
 
 
 
