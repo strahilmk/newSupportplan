@@ -6,7 +6,7 @@ var mongoose = restful.mongoose;
 var supportPlanSchema = new mongoose.Schema({
     userId: Number,
     outcomes: [{
-        numb:Number,
+        numb: Number,
         outcomeDate: String,
         outcomeHeading: Number,
         baselineCUI: Number,
@@ -16,22 +16,18 @@ var supportPlanSchema = new mongoose.Schema({
             actionTitle: String,
             isComplete: Boolean
         }],
-        outcomeReview:[{
+        outcomeReview: [{
             cuiScore: Number,
             reason: Number,
             details: String
         }],
-        fileEntryes:[{
-            entryDate:String,
+        fileEntryes: [{
+            entryDate: String,
             details: String
         }]
     }]
-
-            
-
-
 });
 
 // Return model
 
-module.exports = restful.model('SupportPlans',supportPlanSchema);
+module.exports = restful.model('SupportPlans', supportPlanSchema);
