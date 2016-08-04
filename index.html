@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>SupportPlan</title>
+    <!-- Latest compiled and minified CSS -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+    <style>
+
+
+
+        .topbar-container {
+            display: none;
+        }
+
+        body {
+            font: normal 700 17px/1 "effraregular", sans-serif !important;
+
+        }
+
+        span, p {
+            font: normal 700 15px/1 "effraregular", sans-serif !important;
+            color: white;
+        }
+
+        button {
+            font: normal 700 15px/1 "effraregular", sans-serif !important;
+            color: black;
+
+        }
+
+        .nav-wallich {
+            background: #534F98;
+
+            border: none;
+
+        }
+
+        .nav-wallich > li > a {
+            color: white !important;
+
+            font-size: 20px;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 20px;
+        }
+
+        .nav-wallich > li > a:hover {
+            background-color: #3D3C3E;
+            border: none;
+        }
+
+        .nav-wallich > li:active > a {
+            border: none !important;
+            background-color: #3D3C3E !important;
+        }
+
+        .nav-wallich > li > a:active {
+            border: none !important;
+            background-color: #3D3C3E !important;
+        }
+
+        .nav-wallich > li > a:focus {
+            border: none !important;
+            background-color: #3D3C3E !important;
+        }
+
+        .addbtn {
+            background: #4E7B98 !important;
+            background: -webkit-linear-gradient(#4E7B98, #4E7B98) !important;
+            background: linear-gradient(#4E7B98, #4E7B98) !important;
+            border: 1px solid #000 !important;
+            border-radius: 5px !important;
+            color: #fff !important;
+            display: inline-block !important;
+            padding: 8px 10px !important;
+            font: normal 700 15px/1 "effraregular", sans-serif !important;
+            text-align: center !important;
+            text-shadow: 1px 1px 0 #000 !important;
+        }
+
+        .rmvbtn {
+            background: #BD4D3D !important;
+            background: -webkit-linear-gradient(#BD4D3D, #BD4D3D) !important;
+            background: linear-gradient(#BD4D3D, #BD4D3D) !important;
+            border: 1px solid #000 !important;
+            border-radius: 5px !important;
+            color: #fff !important;
+            display: inline-block !important;
+            padding: 8px 10px !important;
+            font: normal 700 15px/1 "effraregular", sans-serif !important;
+            text-align: center !important;
+            text-shadow: 1px 1px 0 #000 !important;
+            max-width: 120px;
+        }
+
+        .btnsave {
+            background: #878C62 !important;
+            background: -webkit-linear-gradient(#878C62, #878C62) !important;
+            background: linear-gradient(#878C62, #878C62) !important;
+            border: 1px solid #000 !important;
+            border-radius: 5px !important;
+            color: #fff !important;
+            display: inline-block !important;
+            padding: 8px 10px !important;
+            font: normal 700 15px/1 "effraregular", sans-serif !important;
+            text-align: center !important;
+            text-shadow: 1px 1px 0 #000 !important;
+        }
+
+        .panel-default > .panel-heading {
+            background: #534F98 !important;
+            color: white;
+
+        !important;
+        }
+
+        @media (min-width: 1600px) {
+
+            .row {
+                position: relative;
+            }
+
+            .bottom-align-text {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            .marginSupport {
+                margin-top: 53px;
+            }
+
+            .marginFormsTop {
+                margin-top: 30px;
+                margin-bottom: 0;
+            }
+
+        }
+
+        @media (min-width: 768px ) {
+            .row {
+                position: relative;
+            }
+
+            .bottom-align-text {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            .marginSupport {
+                margin-top: 60px;
+            }
+
+            .marginFormsTop {
+                margin-top: 30px;
+                margin-bottom: 0;
+            }
+
+            .margini13 {
+                margin-bottom: 33px;
+            }
+
+            .margini26 {
+                margin-bottom: 40px;
+            }
+
+            .margini39 {
+                margin-bottom: 47px;
+            }
+
+            .margini52 {
+                margin-bottom: 55px;
+            }
+
+            .margini65 {
+                margin-bottom: 60px;
+            }
+
+            .margini78 {
+                margin-bottom: 65px;
+            }
+        }
+
+        @media (max-width: 767px ) {
+            .row {
+                position: relative;
+            }
+
+            .bottom-align-text {
+                position: inherit !important;
+
+            }
+
+            .marginSupport {
+                margin-top: 0 !important;;
+            }
+
+            .marginFormsTop {
+                margin-top: 0 !important;;
+            }
+
+            .spanClass {
+                font-size: 16pt !important;
+            }
+
+            .stopwatch {
+                margin-top: 0 !important;
+            }
+
+            .buttonsMarginMob {
+                margin-top: 20px !important;
+            }
+        }
+
+        @media only screen and (max-width: 1600px) and (min-width: 1298px) {
+
+            .spanClass {
+                font-size: 10pt !important;
+            }
+
+            .row {
+                position: relative;
+            }
+
+            .bottom-align-text {
+                position: absolute;
+                bottom: 1%;
+                right: 0;
+            }
+
+            .marginFormsTop {
+                margin-top: 30px;
+                margin-bottom: 0;
+            }
+
+            .marginSupport {
+                margin-top: 68px;
+            }
+
+            .margini13 {
+                margin-bottom: 33px;
+            }
+
+            .margini26 {
+                margin-bottom: 38px;
+            }
+
+            .margini39 {
+                margin-bottom: 43px;
+            }
+
+            .margini52 {
+                margin-bottom: 50px;
+            }
+
+            .margini65 {
+                margin-bottom: 58px;
+            }
+
+            .margini78 {
+                margin-bottom: 63px;
+            }
+        }
+
+        @media only screen and (min-width: 1163px) and (max-width: 1298px) {
+
+            .marginSupport {
+                margin-top: 60px !important;
+            }
+
+            .spanClass {
+                font-size: 10pt !important;
+            }
+
+            .row {
+                position: relative;
+            }
+
+            .bottom-align-text {
+                position: absolute;
+                bottom: 1%;
+                right: 0;
+            }
+
+            .margini13 {
+                margin-bottom: 30px;
+            }
+
+            .margini26 {
+                margin-bottom: 40px;
+            }
+
+            .margini29 {
+                margin-bottom: 44px;
+            }
+
+            .margini52 {
+                margin-bottom: 60px;
+            }
+
+            .margini65 {
+                margin-bottom: 70px;
+            }
+
+            .margini78 {
+                margin-bottom: 75px;
+            }
+
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .spanClass {
+                font-size: 8pt !important;
+            }
+
+            .row {
+                position: relative;
+            }
+
+            .marginSupport {
+                margin-top: 53px;
+            }
+
+            .bottom-align-text {
+                position: absolute;
+                bottom: 1%;
+                right: 0;
+            }
+
+            .marginFormsTop {
+                margin-top: 36px;
+                margin-bottom: 0;
+            }
+
+            .margini13 {
+                margin-bottom: 27px !important;
+            }
+
+            .margini26 {
+                margin-bottom: 33px !important;
+            }
+
+            .margini39 {
+                margin-bottom: 38px !important;
+            }
+
+            .margini52 {
+                margin-bottom: 43px !important;
+            }
+
+            .margini65 {
+                margin-bottom: 50px !important;
+            }
+
+            .margini78 {
+                margin-bottom: 60px !important;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) and (min-width: 767px) {
+
+            .moveLeft {
+                position: absolute !important;
+                right: 110px !important;
+            }
+
+        }
+
+        input[type=checkbox].css-checkbox {
+            position: absolute;
+            z-index: -1000;
+            left: -1000px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            padding: 0;
+            border: 0;
+        }
+
+        input[type=checkbox] + label:before {
+            content: "\f096";
+            display: none;
+        }
+
+        input[type=checkbox].css-checkbox + label.css-label {
+            padding-left: 22px;
+            height: 17px;
+            display: inline-block;
+            line-height: 17px;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            font-size: 17px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        input[type=checkbox].css-checkbox:checked + label.css-label {
+            background-position: 0 -17px;
+        }
+
+        label.css-label {
+            background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_f8525e60241e4a4d2e0b1af9f9fc3804.png);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #tabSupportPlan {
+            display: none;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        #tabFileEntry {
+            display: none;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        #tabOutcomeRev {
+            display: none;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        #tabClientHistory {
+            display: block;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        #Outcome_ReasonList {
+            display: none;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse nav-wallich navbar-static-top" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">The Support Plan</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav nav-wallich navbar-right">
+                <li class="active"><a href="#" id="showHistory">Client History</a></li>
+                <li><a href="#" id="showSupport">Support Plan</a></li>
+                <li><a href="#" id="showOutcome">Outcome Reviews</a></li>
+                <li><a href="#" id="showFile">File Entry</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="row">
+    <form>
+        <div class="row col-md-10 col-lg-10 col-sm-10">
+            <div class="row col-md-12 col-lg-12 col-sm-12" id="tabClientHistory">Client History Here
+
+
+            </div>
+            <div class="row col-sm-12" id="tabSupportPlan">
+                <legend>
+                    <div class="row ">
+                        <div class="form-group col-sm-2 col-md-2 marginFormsTop">
+                            <label for="Outcome_OutcomeDate1" class="spanClass">Outcome Date:</label>
+                            <input type="date" class="form-control" id="Outcome_OutcomeDate1"
+                                   data-outcomedate-atribute="1">
+                        </div>
+
+
+                        <div class="form-group col-sm-2 col-md-2 marginFormsTop">
+                            <label for="Outcome_OutcomeHeading1" class="spanClass">Outcome Heading:</label>
+                            <select class="form-control" id="Outcome_OutcomeHeading1"
+                                    data-outcomeheading-atribute="1"></select>
+                        </div>
+
+                        <div class="form-group col-sm-2 col-md-2 marginFormsTop">
+                            <label for="Outcome_OutcomeHeading1" class="spanClass">Baseline CU&I:</label>
+                            <select class="form-control" id="Outcome_BaselineCUI"
+                                    data-baselinecui-atribute="1">
+                                <option disabled selected hidden value="0">Please Select:</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-sm-2 col-md-2 marginFormsTop">
+                            <label for="Outcome_OutcomePreferred1" class="spanClass">Preferred Outcome</label>
+                            <input type="text" id="Outcome_OutcomePreferred1" class="form-control"
+                                   data-txt-atribute="1"/>
+                        </div>
+
+
+                        <div class="col-md-4 col-sm-4 bottom-align-text buttonsMarginMob">
+
+
+                            <div class="btn addbtn col-md-6 col-sm-6 " id="addOutcome" style="max-width: 150px;"><span
+                                    class="spanClass">Add Outcome</span></div>
+
+                            <div class="btn btnsave col-md-6 col-sm-6 pull-right " id="saveOutcome"
+                                 style="max-width: 150px;"><span
+                                    class="spanClass">Save Outcomes</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </legend>
+                <div class="" id="Outcomediv">
+
+
+                </div>
+                <div class="getDatefromServer" style="display:none"> add me </div>
+
+            </div>
+            <div class="row col-md-12 col-lg-12 col-sm-12 toInsertOutcome" id="tabOutcomeRev">
+                <legend>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6">Outcome Review</div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+
+
+                            <div class="col-md-6 col-sm-6" style="max-width: 150px;"></div>
+
+                            <div class="btn btnsave col-md-6 col-sm-6 pull-right" id="saveOutcomeRev"
+                                 style="max-width: 150px;"><span
+                                    class="spanClass">Save Outcomes</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </legend>
+
+
+            </div>
+
+
+            <div class="row col-md-12 col-lg-12 col-sm-12 " id="tabFileEntry">
+                <legend>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">File Entry</div>
+
+
+                    </div>
+
+
+                </legend>
+
+            </div>
+
+
+        </div>
+        <div class="row col-md-2 col-lg-2 col-sm-2" style="margin-left: 10px" id="logo">
+            <img src="http://www.clker.com/cliparts/J/9/a/l/j/i/running-man-th.png" class="col-xs-6 col-sm-12"/>
+
+            <div style="margin-top:20px; text-align: center" class="col-xs-6 col-sm-12 stopwatch">
+                <p class="spanClass">Time Spent With Client:</p>
+                <h4 id="timer">
+                    <time>00:00:00</time>
+                </h4>
+                <button id="start" class="col-xs-4 spanClass" style="padding-left: 10px;">start</button>
+                <button id="stop" class="col-xs-4 spanClass" style="padding-left: 10px;">stop</button>
+                <button id="clear" class="col-xs-4 spanClass" style="padding-left: 10px;">clear</button>
+            </div>
+
+        </div>
+    </form>
+</div>
+<button id="clickMe">Click me</button>
+<input type="hidden" id="supportPlanId" />
+</body>
+</html>
+<script src="http://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+<script>
+    var h1 = document.getElementById('timer'),
+            start = document.getElementById('start'),
+            stop = document.getElementById('stop'),
+            clear = document.getElementById('clear'),
+            seconds = 0, minutes = 0, hours = 0,
+            t;
+
+    function add() {
+        seconds++;
+        if (seconds >= 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes >= 60) {
+                minutes = 0;
+                hours++;
+            }
+        }
+
+        h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+        timer();
+    }
+    function timer() {
+        t = setTimeout(add, 1000);
+    }
+    timer();
+
+
+    /* Start button */
+    start.onclick = timer;
+
+    /* Stop button */
+    stop.onclick = function () {
+        clearTimeout(t);
+    }
+
+    /* Clear button */
+    clear.onclick = function () {
+        h1.textContent = "00:00:00";
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
+    }
+</script>
+
+<script>
+
+    $(document).ready(function () {
+        var routeHost = "localhost:3000";
+
+        $(".nav li").on("click", function () {
+            $(".nav li").removeClass("active");
+            $(this).addClass("active");
+        });
+
+
+        $('#showSupport').click(function () {
+            $('#tabFileEntry').css("display", "none");
+            $('#tabOutcomeRev').css("display", "none");
+            $('#tabClientHistory').css("display", "none");
+            $('#tabSupportPlan').css("display", "block");
+            $('[data-txt-atribute]').each(function () {
+                var valueID = $(this).data('txt-atribute');
+
+                var pHeight = $('.Outcome_PrefOutcome' + valueID).height();
+
+                if (pHeight == 13) {
+                    $('#actionDiv' + valueID).addClass('margini13');
+                }
+                if (pHeight == 26) {
+                    $('#actionDiv' + valueID).addClass('margini26');
+                }
+                if (pHeight == 39) {
+                    $('#actionDiv' + valueID).addClass('margini39');
+                }
+
+                if (pHeight == 52) {
+                    $('#actionDiv' + valueID).addClass('margini52');
+                }
+
+                if (pHeight == 65) {
+                    $('#actionDiv' + valueID).addClass('margini65');
+                }
+                if (pHeight == 78) {
+                    $('#actionDiv' + valueID).addClass('margini78');
+                }
+
+                if (pHeight == 10) {
+                    $('#actionDiv' + valueID).addClass('margini13');
+                }
+                if (pHeight == 20) {
+                    $('#actionDiv' + valueID).addClass('margini26');
+                }
+                if (pHeight == 30 && width < 1200) {
+                    $('#actionDiv' + valueID).addClass('margini39');
+                }
+
+                if (pHeight == 40) {
+                    $('#actionDiv' + valueID).addClass('margini52');
+                }
+                if (pHeight == 50) {
+                    $('#actionDiv' + valueID).addClass('margini65');
+                }
+                if (pHeight == 60 && width < 1200) {
+                    $('#actionDiv' + valueID).addClass('margini78');
+                }
+
+
+                if (pHeight == 15) {
+                    $('#actionDiv' + valueID).addClass('margini13');
+                }
+
+                if (pHeight == 30 && width > 1600) {
+                    $('#actionDiv' + valueID).addClass('margini26');
+                }
+                if (pHeight == 45) {
+                    $('#actionDiv' + valueID).addClass('margini39');
+                }
+                if (pHeight == 60) {
+                    $('#actionDiv' + valueID).addClass('margini52');
+                }
+
+                if (pHeight == 75) {
+                    $('#actionDiv' + valueID).addClass('margini65');
+                }
+
+                if (pHeight == 90) {
+                    $('#actionDiv' + valueID).addClass('margini78');
+                }
+            });
+        });
+        $('#showHistory').click(function () {
+            $('#tabFileEntry').css("display", "none");
+            $('#tabOutcomeRev').css("display", "none");
+            $('#tabSupportPlan').css("display", "none");
+            $('#tabClientHistory').css("display", "block");
+        });
+        $('#showOutcome').click(function () {
+            $('#tabFileEntry').css("display", "none");
+            $('#tabOutcomeRev').css("display", "Block");
+            $('#tabSupportPlan').css("display", "none");
+            $('#tabClientHistory').css("display", "none");
+        });
+        $('#showFile').click(function () {
+            $('#tabFileEntry').css("display", "block");
+            $('#tabOutcomeRev').css("display", "none");
+            $('#tabSupportPlan').css("display", "none");
+            $('#tabClientHistory').css("display", "none");
+        });
+
+
+        function generateOutcome(valueID) {
+
+            $("#Outcomediv").append('<div class="panel-group" data-outcome-template="true" id="forActionOutcome' + valueID + '"><div class="panel panel-default" ><div class="panel-heading " id="OutcomePanel' + valueID + '"><h4 class="row panel-title"><span class="col-xs-2 col-sm-1 spanClass title' + valueID + '"><p>Outcome</p><p data-outcome-number="true">' + valueID + '</p> </span><span class="col-xs-2 col-sm-2"  ><p class="spanClass">Outcome Date:</p><p class="Outcome_Date' + valueID + ' spanClass" data-outcomedate-atribute="' + valueID + '"></p></span><span class="col-xs-2 col-sm-2 " ><p class="spanClass">Outcome Heading:</p><p class="Outcome_Heading' + valueID + ' spanClass" data-outcomeheading-atribute="' + valueID + '"></p></span><span class="col-sm-2 col-xs-2"><p class="spanClass">Baseline CU&I:</p><p class="spanClass BaselineCUI' + valueID + '" data-baseline="' + valueID + '"></p></span><span class="col-xs-4 col-sm-2 " ><p class="spanClass">Preferred Outcome:</p><p class="Outcome_PrefOutcome' + valueID + ' spanClass" data-txt-atribute="' + valueID + '"></p></span><span class="col-sm-3"></span><span class="col-sm-2"></span></h4> </div><div class="panel-body" id="OutcomeAction' + valueID + '"><div class="row " id="Outcome' + valueID + '" data-outcome="' + valueID + '"></div><div class="" id="Outcome_Action' + valueID + '" data-action="' + valueID + '"></div></div></div></div>');
+            $('#Outcome' + valueID).attr('data-actioncounter', '1');
+            $('#Outcome' + valueID).append('<div class="form-group col-sm-3 bottom-align-text" id="actionDiv' + valueID + '" data-action-div="' + valueID + '"></div>');
+            $('#actionDiv' + valueID).append('<div id="getDataActionFromServer'+valueID+'" style="display:none" data-get-actionserver="'+valueID+'"></div> <div class="btn addbtn moveLeft" id="addAction' + valueID + '" data-action-button="' + valueID + '"><span class="spanClass">Add Action</span> </div> <div class="btn rmvbtn pull-right" id="removeOutcome' + valueID + '" data-remove-outcome="' + valueID + '"><span class="spanClass">Delete Row</span></div>');
+            $('.toInsertOutcome').append(' <div class="panel-group" data-review-template="true" id="outcomeReview' + valueID + '" data-outcomeReview="' + valueID + '"> <div class="panel panel-default" > <div class="panel-heading "> <h4 class="row panel-title"><span class="col-xs-2 spanClass" >Outcome ' + valueID + ' Review :</span><span class="col-xs-2" ><p class="spanClass">Outcome Date:</p><p class="spanClass" id="Outcome_DateReview' + valueID + '"></p></span><span class="col-xs-2" ><p class="spanClass">Outcome Heading:</p><p class="spanClass" id="Outcome_HeadingReview' + valueID + '"></p></span><span class="col-xs-2"><p class="spanClass">Baseline CU&I:</p><p class="spanClass" id="Outcome_CUIScoreReview' + valueID + '"></p></span><span class="col-xs-4" ><p class="spanClass">Preferred Outcome:</p><p class="spanClass" id="Outcome_PrefferedOutcomeReview' + valueID + '"></p></span></h4> </div> <div class=" panel-body" id="outcomeDivReviewTop' + valueID + '"> <div class="form-group col-md-6 col-sm-6"> <label for="Outcome_CUIScore' + valueID + '">CU&I Score:</label> <select id="Outcome_CUIScore' + valueID + '" class="form-control " data-cuiscore="' + valueID + '"> <option value="0" disabled selected hidden>Please Select:</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5 - Autcome achived and Closed</option> </select> </div> <div class="form-group col-md-6 col-sm-6" id="Outcome_ReasonList' + valueID + '" style="display: none;"> <label for="Outcome_Reason' + valueID + '">Reason:</label> <select id="Outcome_Reason' + valueID + '" class="form-control" data-reason="' + valueID + '"> <option value="0" disabled selected hidden>Please Select:</option> <option value="1">Barriers </option> <option value="2">Beyond the control ofthe provider </option> <option value="3">Non Engagement </option> <option value="4">Unable to meet needs/risk </option> <option value="5">Still working towardssupport outcomes. </option> <option value="6">Outcome achieved -still moitoring CU&I </option> </select> </div><div class="col-md-12"> <p>Details:</p> <textarea class="form-control ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow " id=" outcome_detailsreview' + valueID + '" data-detailsreview="' + valueID + '" maxlength="3000" placeholder="Details (Max. 3000 Characters)" required="" rows="4" style="height: 123px;"></textarea> </div> </div> </div> </div>');
+            $('#tabFileEntry').append('<div class="panel-group" data-file-entry-template="true" id="FileEntry' + valueID + '" data-fileRew="' + valueID + '"> <div class="panel panel-default"> <div class="panel-heading "> <h4 class="row panel-title"><span class="col-xs-2 spanClass">File Entry for Outcome ' + valueID + ':</span><span class="col-xs-2" ><p class="spanClass">Outcome Date:</p><p class="spanClass" id="Outcome_FileDate' + valueID + '"></p></span><span class="col-xs-2" ><p class="spanClass">Outcome Heading:</p><p class="spanClass" id="Outcome_FileHeading' + valueID + '"></p></span><span class="col-xs-2"><p class="spanClass">Baseline CU&I:</p><p class="spanClass" id="Outcome_FileCUIScore' + valueID + '"></p></span><span class="col-xs-4" ><p class="spanClass">Preferred Outcome:</p><p class="spanClass" id="Outcome_FilePreff' + valueID + '"></p></span></h4> </div> <div class=" panel-body" id="outcomeFileEntryTop' + valueID + '">  <div class="form-group col-md-12 col-sm-12  "> <label for="FileEntry' + valueID + '_Date">Relevant to date and time:</label> <input date-file-entry-date="true" type="datetime-local" class="form-control" id="FileEntry' + valueID + '_Date"/> </div> <div class="col-md-12"> <p>Details:</p> <textarea data-file-entry-details="true" class="form-control ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow " id=" outcome_detailFileEntry' + valueID + '" data-detailFileEntry="' + valueID + '" maxlength="3000" placeholder="Details (Max. 3000 Characters)" required="" rows="4" style="height: 123px;"></textarea> </div> </div> </div> </div>');
+        }
+
+        appendOptions(1);
+
+        $('.getDatefromServer').click(function(){
+
+
+
+
+            var width = $(window).width(), height = $(window).height();
+
+            var valueID = $('[data-outcome]').last().data('outcome');
+            if ($('[data-outcome]').last().data('outcome') == undefined) {
+                valueID = 0;
+            }
+            generateOutcome(++valueID);
+            var oPrefO = $('#Outcome_OutcomePreferred1').val();
+
+            var oHeading = $('#Outcome_OutcomeHeading1 option:selected').text()
+            var oDate = $('#Outcome_OutcomeDate1').val();
+            var oBaseline = $('#Outcome_BaselineCUI option:selected').text();
+            $('.Outcome_PrefOutcome' + valueID).text(oPrefO);
+
+
+            var pHeight = $('.Outcome_PrefOutcome' + valueID).height();
+
+            if (pHeight == 13) {
+                $('#actionDiv' + valueID).addClass('margini13');
+            }
+            if (pHeight == 26) {
+                $('#actionDiv' + valueID).addClass('margini26');
+            }
+            if (pHeight == 39) {
+                $('#actionDiv' + valueID).addClass('margini39');
+            }
+
+            if (pHeight == 52) {
+                $('#actionDiv' + valueID).addClass('margini52');
+            }
+
+            if (pHeight == 65) {
+                $('#actionDiv' + valueID).addClass('margini65');
+            }
+            if (pHeight == 78) {
+                $('#actionDiv' + valueID).addClass('margini78');
+            }
+
+            if (pHeight == 10) {
+                $('#actionDiv' + valueID).addClass('margini13');
+            }
+            if (pHeight == 20) {
+                $('#actionDiv' + valueID).addClass('margini26');
+            }
+            if (pHeight == 30 && width < 1200) {
+                $('#actionDiv' + valueID).addClass('margini39');
+            }
+
+            if (pHeight == 40) {
+                $('#actionDiv' + valueID).addClass('margini52');
+            }
+            if (pHeight == 50) {
+                $('#actionDiv' + valueID).addClass('margini65');
+            }
+            if (pHeight == 60 && width < 1200) {
+                $('#actionDiv' + valueID).addClass('margini78');
+            }
+
+
+            if (pHeight == 15) {
+                $('#actionDiv' + valueID).addClass('margini13');
+            }
+
+            if (pHeight == 30 && width > 1600) {
+                $('#actionDiv' + valueID).addClass('margini26');
+            }
+            if (pHeight == 45) {
+                $('#actionDiv' + valueID).addClass('margini39');
+            }
+            if (pHeight == 60) {
+                $('#actionDiv' + valueID).addClass('margini52');
+            }
+
+            if (pHeight == 75) {
+                $('#actionDiv' + valueID).addClass('margini65');
+            }
+
+            if (pHeight == 90) {
+                $('#actionDiv' + valueID).addClass('margini78');
+            }
+
+            $('.Outcome_Date' + valueID).text(oDate);
+            $('.Outcome_Heading' + valueID).text(oHeading);
+            $('.BaselineCUI' + valueID).text(oBaseline);
+
+            $('[data-txt-atribute]').each(function () {
+                var valueID = $(this).data("txt-atribute");
+                var gettxt = $(this).text();
+                $('#Outcome_PrefferedOutcomeReview' + valueID).text(gettxt);
+
+                $('#Outcome_FilePreff' + valueID).text(gettxt);
+
+            });
+            $('[data-outcomeheading-atribute]').each(function () {
+                var headingID = $(this).data('outcomeheading-atribute');
+                var getheadtxt = $(this).text();
+                $('#Outcome_HeadingReview' + headingID).text(getheadtxt);
+                $('#Outcome_FileHeading' + headingID).text(getheadtxt);
+            });
+            $('[data-outcomedate-atribute]').each(function () {
+                var dateID = $(this).data('outcomedate-atribute');
+                var getDate = $(this).text();
+                $('#Outcome_DateReview' + dateID).text(getDate);
+                $('#Outcome_FileDate' + dateID).text(getDate);
+            });
+
+            $('[data-baseline]').each(function () {
+                var baseID = $(this).data('baseline');
+                var getBase = $(this).text();
+                $('#Outcome_CUIScoreReview' + baseID).text(getBase);
+                $('#Outcome_FileCUIScore' + baseID).text(getBase);
+            });
+            $('#Outcome_OutcomePreferred1').val("");
+            $('#Outcome_OutcomeHeading1').val("0");
+            $('#Outcome_OutcomeDate1').val("");
+            $('#Outcome_BaselineCUI').val("0");
+            $('#Outcome_BaselineCUI').prop('disabled', false);
+
+        });
+
+        $("#addOutcome").click(function () {
+            var width = $(window).width(), height = $(window).height();
+
+            var valueID = $('[data-outcome]').last().data('outcome');
+            if ($('[data-outcome]').last().data('outcome') == undefined) {
+                valueID = 0;
+            }
+            generateOutcome(++valueID);
+            var oPrefO = $('#Outcome_OutcomePreferred1').val();
+
+            var oHeading = $('#Outcome_OutcomeHeading1 option:selected').text()
+            var oDate = $('#Outcome_OutcomeDate1').val();
+            var oBaseline = $('#Outcome_BaselineCUI option:selected').text();
+            $('.Outcome_PrefOutcome' + valueID).text(oPrefO);
+
+
+            var pHeight = $('.Outcome_PrefOutcome' + valueID).height();
+
+            if (pHeight == 13) {
+                $('#actionDiv' + valueID).addClass('margini13');
+            }
+            if (pHeight == 26) {
+                $('#actionDiv' + valueID).addClass('margini26');
+            }
+            if (pHeight == 39) {
+                $('#actionDiv' + valueID).addClass('margini39');
+            }
+
+            if (pHeight == 52) {
+                $('#actionDiv' + valueID).addClass('margini52');
+            }
+
+            if (pHeight == 65) {
+                $('#actionDiv' + valueID).addClass('margini65');
+            }
+            if (pHeight == 78) {
+                $('#actionDiv' + valueID).addClass('margini78');
+            }
+
+            if (pHeight == 10) {
+                $('#actionDiv' + valueID).addClass('margini13');
+            }
+            if (pHeight == 20) {
+                $('#actionDiv' + valueID).addClass('margini26');
+            }
+            if (pHeight == 30 && width < 1200) {
+                $('#actionDiv' + valueID).addClass('margini39');
+            }
+
+            if (pHeight == 40) {
+                $('#actionDiv' + valueID).addClass('margini52');
+            }
+            if (pHeight == 50) {
+                $('#actionDiv' + valueID).addClass('margini65');
+            }
+            if (pHeight == 60 && width < 1200) {
+                $('#actionDiv' + valueID).addClass('margini78');
+            }
+
+
+            if (pHeight == 15) {
+                $('#actionDiv' + valueID).addClass('margini13');
+            }
+
+            if (pHeight == 30 && width > 1600) {
+                $('#actionDiv' + valueID).addClass('margini26');
+            }
+            if (pHeight == 45) {
+                $('#actionDiv' + valueID).addClass('margini39');
+            }
+            if (pHeight == 60) {
+                $('#actionDiv' + valueID).addClass('margini52');
+            }
+
+            if (pHeight == 75) {
+                $('#actionDiv' + valueID).addClass('margini65');
+            }
+
+            if (pHeight == 90) {
+                $('#actionDiv' + valueID).addClass('margini78');
+            }
+
+            $('.Outcome_Date' + valueID).text(oDate);
+            $('.Outcome_Heading' + valueID).text(oHeading);
+            $('.BaselineCUI' + valueID).text(oBaseline);
+
+            $('[data-txt-atribute]').each(function () {
+                var valueID = $(this).data("txt-atribute");
+                var gettxt = $(this).text();
+                $('#Outcome_PrefferedOutcomeReview' + valueID).text(gettxt);
+
+                $('#Outcome_FilePreff' + valueID).text(gettxt);
+
+            });
+            $('[data-outcomeheading-atribute]').each(function () {
+                var headingID = $(this).data('outcomeheading-atribute');
+                var getheadtxt = $(this).text();
+                $('#Outcome_HeadingReview' + headingID).text(getheadtxt);
+                $('#Outcome_FileHeading' + headingID).text(getheadtxt);
+            });
+            $('[data-outcomedate-atribute]').each(function () {
+                var dateID = $(this).data('outcomedate-atribute');
+                var getDate = $(this).text();
+                $('#Outcome_DateReview' + dateID).text(getDate);
+                $('#Outcome_FileDate' + dateID).text(getDate);
+            });
+
+            $('[data-baseline]').each(function () {
+                var baseID = $(this).data('baseline');
+                var getBase = $(this).text();
+                $('#Outcome_CUIScoreReview' + baseID).text(getBase);
+                $('#Outcome_FileCUIScore' + baseID).text(getBase);
+            });
+
+            var outcome = {
+                numb: valueID,
+                outcomeDate:$('#Outcome_OutcomeDate1').val(),
+                outcomeHeading :$('#Outcome_OutcomeHeading1 option:selected').text(),
+                baselineCUI:$('#Outcome_BaselineCUI option:selected').text(),
+                preferredOutcome:$('#Outcome_OutcomePreferred1').val()
+
+
+            };
+            $.ajax({
+
+            });
+
+
+
+
+            $('#Outcome_OutcomePreferred1').val("");
+            $('#Outcome_OutcomeHeading1').val("0");
+            $('#Outcome_OutcomeDate1').val("");
+            $('#Outcome_BaselineCUI').val("0");
+            $('#Outcome_BaselineCUI').prop('disabled', false);
+        });
+
+
+        $("#tabSupportPlan").on("click", "#saveOutcome", function () {
+
+            $.ajax({
+                type: 'PUT',
+                url: 'http://'+routeHost+'/api/SupportPlans',
+                success: function (SupportPlans) {
+
+                }
+
+            });
+
+
+        });
+
+        $('#tabOutcomeRev').on('change', '[data-cuiscore]', function () {
+            var valueID = $(this).data('cuiscore');
+
+            if (this.value != 5) {
+                alert('Select Reason');
+                $('#Outcome_ReasonList' + valueID).show();
+            }
+            else {
+                $('#Outcome_ReasonList' + valueID).css('display', 'none');
+            }
+        });
+// this is for wallich only
+        $('#tabSupportPlan').on('change', '#Outcome_OutcomeHeading1', function () {
+            var selected = $('#Outcome_OutcomeHeading1 option:selected').text();
+            $('[data-outcomeheading-atribute]').each(function () {
+                var valueID = $(this).data('outcomeheading-atribute');
+                var getheadtxt = $(this).text();
+                if (getheadtxt == selected) {
+                    var baselinenumber = $('.BaselineCUI' + valueID).text();
+                    $('#Outcome_BaselineCUI').val(baselinenumber).prop('disabled', true);
+
+                }
+                else {
+                    $('#Outcome_BaselineCUI').val("0");
+                    $('#Outcome_BaselineCUI').prop('disabled', false);
+                }
+            });
+        });
+
+        function appendOptions(valueID) {
+            $("#Outcome_OutcomeHeading" + valueID).append("<option disabled selected hidden value='0'>Please Select:</option>" +
+                    "<option value='1'>Feeling Safe</option>" +
+                    "<option value='2'>Safety</option>" +
+                    "<option value='3'>Accommodation</option>" +
+                    "<option value='4'>Relationships</option>" +
+                    "<option value='5'>Community</option>" +
+                    "<option value='6'>Money</option>" +
+                    "<option value='7'>Learning</option>" +
+                    "<option value='8'>Employment</option>" +
+                    "<option value='9'>Physical Health</option>" +
+                    "<option value='10'>Mental Health</option>" +
+                    "<option value='11'>Lifestyle</option>" +
+                    "<option value='12'>Mobile</option>" +
+                    "<option value='13'>Office</option>" +
+                    "<option value='14'>Home</option>");
+        }
+
+
+        $('#tabSupportPlan').on('click', '[data-get-actionserver]', function () {
+
+            var getActionValue = $(this).attr('data-get-actionserver');
+            var currentOutcome = $('#Outcome' + getActionValue);
+            var inCurrent = $(currentOutcome).data('outcome');
+
+
+            var actionValueID = $('#Outcome' + getActionValue).data('actioncounter');
+
+            $("#Outcome_Action" + getActionValue).append('<div class="row" data-action-template="true" id="Outcome' + inCurrent + 'Action' + actionValueID + '"> <div class="form-group col-sm-3"> <label for="Outcome_Action' + inCurrent + 'Date' + actionValueID + '">Action Date:</label> <input type="date" data-action-date="true" class="form-control" id="Outcome_Action' + inCurrent + 'Date' + actionValueID + '"> </div> <div class="form-group col-sm-3"> <label for="Outcome_Action' + inCurrent + 'Text' + actionValueID + '">Action:</label> <input type="text" class="form-control" data-action-text="true" id="Outcome_Action' + inCurrent + 'Text' + actionValueID + '"> </div> <div class="form-group col-sm-3"></div> <div class="form-group col-sm-3 bottom-align-text " > <input type="checkbox" data-action-is-complete="true"  id="Outcome_Action' + inCurrent + 'Chekbox' + actionValueID + '" class="css-checkbox" data-checkbox-atr="' + actionValueID + '" data-outcome-checkbox="' + inCurrent + '"> <label for="Outcome_Action' + inCurrent + 'Chekbox' + actionValueID + '" class="css-label moveLeft">Complete</label> <div class="btn rmvbtn pull-right" id="deleteAction' + inCurrent + 'Row' + actionValueID + '" data-whatoutcomermv="' + inCurrent + '" data-removeaction-button="' + actionValueID + '" > <span class="spanClass"> Delete Row</span> </div> </div> </div>');
+
+            var intActionCounter = parseInt(actionValueID);
+            intActionCounter++;
+            $('#Outcome' + getActionValue).data('actioncounter', intActionCounter);
+
+
+        });
+
+
+        $('#tabSupportPlan').on('click', '[data-action-button]', function () {
+
+            var getActionValue = $(this).attr('data-action-button');
+            var currentOutcome = $('#Outcome' + getActionValue);
+            var inCurrent = $(currentOutcome).data('outcome');
+
+
+            var actionValueID = $('#Outcome' + getActionValue).data('actioncounter');
+
+            $("#Outcome_Action" + getActionValue).append('<div class="row" data-action-template="true" id="Outcome' + inCurrent + 'Action' + actionValueID + '"> <div class="form-group col-sm-3"> <label for="Outcome_Action' + inCurrent + 'Date' + actionValueID + '">Action Date:</label> <input type="date" data-action-date="true" class="form-control" id="Outcome_Action' + inCurrent + 'Date' + actionValueID + '"> </div> <div class="form-group col-sm-3"> <label for="Outcome_Action' + inCurrent + 'Text' + actionValueID + '">Action:</label> <input type="text" class="form-control" data-action-text="true" id="Outcome_Action' + inCurrent + 'Text' + actionValueID + '"> </div> <div class="form-group col-sm-3"></div> <div class="form-group col-sm-3 bottom-align-text " > <input type="checkbox" data-action-is-complete="true"  id="Outcome_Action' + inCurrent + 'Chekbox' + actionValueID + '" class="css-checkbox" data-checkbox-atr="' + actionValueID + '" data-outcome-checkbox="' + inCurrent + '"> <label for="Outcome_Action' + inCurrent + 'Chekbox' + actionValueID + '" class="css-label moveLeft">Complete</label> <div class="btn rmvbtn pull-right" id="deleteAction' + inCurrent + 'Row' + actionValueID + '" data-whatoutcomermv="' + inCurrent + '" data-removeaction-button="' + actionValueID + '" > <span class="spanClass"> Delete Row</span> </div> </div> </div>');
+
+            var intActionCounter = parseInt(actionValueID);
+            intActionCounter++;
+            $('#Outcome' + getActionValue).data('actioncounter', intActionCounter);
+
+
+        });
+
+        $('#tabSupportPlan').on('click', '[data-remove-outcome]', function () {
+            var getOutcomeValue = $(this).attr('data-remove-outcome');
+            var intGetOutcomeValue = parseInt(getOutcomeValue);
+
+            $("#forActionOutcome" + intGetOutcomeValue).remove();
+            $("#outcomeReview" + intGetOutcomeValue).remove();
+            $("#FileEntry" + intGetOutcomeValue).remove();
+        });
+
+
+        $('#tabSupportPlan').on('click', '[data-removeaction-button]', function () {
+            var getActionValue = $(this).attr('data-removeaction-button');
+            var intGetActionValue = parseInt(getActionValue);
+            var currentOutcomeNumb = $(this).attr('data-whatOutcomermv');
+
+
+            $("#Outcome" + currentOutcomeNumb + "Action" + getActionValue).remove();
+
+        });
+
+
+        $('#tabSupportPlan').on('click', '[data-checkbox-atr]', function () {
+            var getCheckBoxValue = $(this).attr('data-checkbox-atr');
+            var intCheckBoxValue = parseInt(getCheckBoxValue);
+            var currentOutcomeNumb = $(this).data('outcome-checkbox');
+            var forParsing = $(this).parent('div');
+            var OutcomeString = '#Outcome' + String(currentOutcomeNumb);
+
+
+            $('#Outcome_Action' + currentOutcomeNumb + 'Text' + intCheckBoxValue).prop("disabled", $(this).is(':checked'));
+
+
+            $('#Outcome_Action' + currentOutcomeNumb + 'Date' + intCheckBoxValue).attr("disabled", $(this).is(':checked'));
+
+
+        });
+
+        $.ajax({
+            method: 'GET',
+            url: 'http://'+routeHost+'/api/SupportPlans',
+            success: function (supportPlans) {
+                console.log('retrieved support plans:', supportPlans);
+
+                $.each(supportPlans, function (index, supportPlan) {
+                    $('#supportPlanId').val(supportPlan._id);
+                    console.log('looping support plan:', supportPlan);
+
+                    var outcomeNumber = supportPlan.outcomes.length;
+                    var outcomes = supportPlan.outcomes;
+                    $.each(outcomes, function (outcomeNumber, outcome) {
+                        console.log('looping outcome:', outcome);
+
+                        var actionNumber = outcome.actions.length;
+                        var actions = outcome.actions;
+                        var rewiewNumber = outcome.outcomeReview.length;
+
+                        var reviews = outcome.outcomeReview;
+                        var fileNumber = outcome.fileEntryes.length;
+                        var fileEntryes = outcome.fileEntryes;
+
+                        // insert all outcomes inside support plan
+                        $('#Outcome_OutcomePreferred1').val(outcome.preferredOutcome);
+                        $('#Outcome_BaselineCUI').val(outcome.baselineCUI);
+                        $('#Outcome_OutcomeDate1').val(outcome.outcomeDate);
+                        $('#Outcome_OutcomeHeading1').val(outcome.outcomeHeading);
+                        $('.getDatefromServer').trigger('click');
+
+
+                        $.each(actions, function (actionNumber, action) {
+
+
+
+                            document.getElementById('getDataActionFromServer' + (outcomeNumber + 1)).click();
+                            // $('#getDataActionFromServer'+(outcomeNumber+1)).trigger('click');
+                            $('#Outcome_Action' + (outcomeNumber + 1) + 'Date' + (actionNumber + 1)).val(action.actionDate);
+                            $('#Outcome_Action' + (outcomeNumber + 1) + 'Text' + (actionNumber + 1)).val(action.actionTitle);
+                            if (action.isComplete) {
+                                $('#Outcome_Action'+(outcomeNumber + 1)+'Chekbox'+(actionNumber + 1)).trigger('click')
+
+                            }
+
+                        });
+
+                        $.each(reviews, function (rewiewNumber, review) {
+
+                            $('#Outcome_CUIScore' + (outcomeNumber + 1)).val(review.cuiScore);
+                            if (review.cuiScore != 5) {
+                                $('#Outcome_ReasonList' + (outcomeNumber + 1)).show();
+
+                            }
+                            $('#Outcome_Reason' + (outcomeNumber + 1)).val(review.reason);
+                            $('#outcome_detailsreview'+ (outcomeNumber + 1)).val(review.reason);
+                            $('[data-detailsreview='+(outcomeNumber + 1)+']').text(review.details);
+
+                        });
+                        $.each(fileEntryes, function (fileNumber, fileEntry) {
+
+
+                            $('#FileEntry'+ (outcomeNumber+1)+'_Date').val(fileEntry.entryDate);
+                            $('[data-detailfileentry='+(outcomeNumber + 1)+']').text(fileEntry.details);
+
+                        });
+                    });
+
+
+                });
+
+            },
+            error: function () {
+                alert('error loading the support plan');
+            }
+
+
+        });
+
+        $('#clickMe').click(function () {
+            var supportPlan = {
+                _id: $('#supportPlanId').val(),
+                outcomes: []
+            };
+
+            $('[data-outcome-template]').each(function () {
+                var outcome = {
+                    actions: [],
+                    fileEntryes: [],
+                    outcomeReview: [],
+                    outcomeDate: $(this).find('[data-outcomedate-atribute]').text(),
+                    outcomeHeading: 1,
+                    //outcomeHeading: $(this).find('[data-outcomeheading-atribute]').text(),
+                    baselineCUI: parseInt($(this).find('[data-baseline]').text()),
+                    preferredOutcome: $(this).find('[data-txt-atribute]').text(),
+                    numb: parseInt($(this).find('[data-outcome-number]').text())
+                };
+
+                $(this).find('[data-action-template]').each(function () {
+
+                    var action = {
+                        actionDate: $(this).find('[data-action-date]').val(),
+                        actionTitle: $(this).find('[data-action-text]').val(),
+                        isComplete: $(this).find('[data-action-is-complete]').is(':checked')
+                    };
+                    outcome.actions.push(action);
+                });
+
+                supportPlan.outcomes.push(outcome);
+            });
+
+            $('[data-file-entry-template]').each(function (index) {
+                var fileEntry = {
+                    entryDate: $(this).find('[date-file-entry-date]').val(),
+                    details: $(this).find('[data-file-entry-details]').val()
+                };
+                supportPlan.outcomes[index].fileEntryes.push(fileEntry);
+            });
+
+            $('[data-review-template]').each(function (index) {
+                var outcomeReview = {
+                    cuiScore: $(this).find('[data-cuiscore]').val(),
+                    reason: $(this).find('[data-reason]').val(),
+                    details: $(this).find('[data-detailsreview]').val()
+                };
+                supportPlan.outcomes[index].outcomeReview.push(outcomeReview);
+            });
+
+            console.log('updating support plan:', supportPlan);
+
+            $.ajax({
+                method: 'PUT',
+                url: 'http://'+routeHost+'/api/SupportPlans/' + supportPlan._id,
+                contentType: 'application/json',
+                data: JSON.stringify(supportPlan),
+                success: function(response){
+                    console.log(response);
+                },
+                error: function(err){
+                    console.log(err);
+                }
+            })
+        });
+
+    });
+</script>
+
+
